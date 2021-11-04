@@ -5,8 +5,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/tabs.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="js/tabs.js"></script>
   
   <style>
 .footer {
@@ -23,29 +26,29 @@
 <body>
 
 <div class="jumbotron text-center" style="background-color:#F3FEFF; height: 50px;margin-top:-1%">
-	
+  
    
-   <span style="float:left; margin-top:-30px; margin-left:1%"><img src="img/coat.png" width="100px"></span>
-   <center> <b style="font-size: 20px">GOVERNMENT INTENSHIP PROGRAMME</b> </center>
-    <span style="float:right; margin-top:-60px; margin-right:1%"><img src="img/mysc1.png" width="250px"></span>
-  </div>	
+   <span  id="logoImg" style="float:left; margin-top:-30px; margin-left:1%"><img src="img/coat.png" width="100px"></span>
+   <center id="headerTXT1"> <b style="font-size: 20px">GOVERNMENT INTENSHIP PROGRAMME</b> </center> 
+         <center id="headerTXT"> <b style="font-size: 20px">GOVT INTENSHIP PROGRAMME</b> </center>
+
+    <div style="float:right; margin-top:-60px; margin-right:1%" id="second-logo"><img src="img/mysc1.png" width="60%"></div>
+  </div>
   <div class="panel" style="background-color:blue; height: 20px; margin-top: -2%"></div>
 
-  
 <div class="container">
-<div class="col-sm-2" style="height:400px; background-color:#EFEFF0; border-radius:10px">
-<ul class="list-group" style=" margin-top:4%; border-radius:10px">
-  <li class="list-group-item" >Change host </li>
-  <li class="list-group-item">View available slots</li>
-  <li class="list-group-item">Queries</li>
-  <li class="list-group-item">Documents</li>
-  <li class="list-group-item">Placement Requests</li>
-</ul>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Change host</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">View available jobs</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Application status</button>
 </div>
 
-<div class="col-sm-8" style="background-color:#EFEFF0;height:400px; border-radius:10px; margin-left:5%;">
-<!--change host company-->
-<div id="requestPlacement" style=" display:none">
+<div id="London" class="tabcontent">
+  <h3>Request to change host company</h3>
+  <p>
+    
+    <div id="requestPlacement" >
 <form action="/action_page.php">
   <div class="form-group">
     <label for="email">Current host company:</label>
@@ -74,58 +77,91 @@
   <button type="submit" class="btn btn-info">confirm</button>
 </form>
 </div>
-<!--change host company-->
-<!--view slots-->
-<div id="slots" class="d-flex" style="margin-top:1%"> 
-<h4> Search placement openings</h4>
-<span>
-<div class="well">
-<form>
-  <div class="row" style="96%">
-    <div class="col" >
-      <input type="text" class="form-control" id="email" placeholder="Search" name="email" style="border-radius:5px">
-	  <button class="btn btn-info"style="float:right; margin-top:1%" >go</button>
+
+  </p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  
+  <p>
+     <div class="col-sm-12">
+      JOB OPENINGS
+      <hr>
+      <!--jobs-->
+      <div class="panel" style="background-color:transparent">
+     <a href="#demo" class="btn btn-link" data-toggle="collapse">Account Intern wanted at Malete landboard</a>
+    <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <br><a href="">apply</a>
     </div>
-	<div style="margin-top: 1%">
-	<label class="checkbox-inline">
-      <input type="checkbox" value="">GOVERNMENT
-    </label>
-    <label class="checkbox-inline">
-      <input type="checkbox" value="">PARASTATAL
-    </label>
-    <label class="checkbox-inline">
-      <input type="checkbox" value="">PRIVATE
-    </label>
-   </div>
-  </div>
-</form>
+    <br>
+    <a href="#demo1" class="btn btn-link" data-toggle="collapse">IT Intern wanted at Tlokweng landboard</a>
+    <div id="demo1" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <br><a href="">apply</a>
+    </div>
+      <br>
+    <a href="#demo11" class="btn btn-link" data-toggle="collapse">IT Intern wanted at Malete landboard</a>
+    <div id="demo11" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    <br><a href="">apply</a>
+    </div>
 </div>
-<div class="panel" style="background-color:transparent">
-	<a href="#demo" class="btn btn-link" data-toggle="collapse">Account Intern wanted at Malete landboard</a>
-	  <div id="demo" class="collapse">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	  </div>
-	  <br>
-	  <a href="#demo1" class="btn btn-link" data-toggle="collapse">IT Intern wanted at Tlokweng landboard</a>
-	  <div id="demo1" class="collapse">
-		Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	  </div
+      <!--jobs-->
+    </div>
+
+  </p> 
 </div>
-</span>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>My applications</h3>
+  <p>
+
+       <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Institution</th>
+        <th>Application date</th>
+        <th>Step</th>
+    <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Malete land board</td>
+        <td>01/02/21</td>
+        <td>rejected</td>
+    <td> 
+    
+    <button class="btn btn-xs btn-success" data-toggle="modal" data-target="#placeApplicant"> reapply</button>
+    <button class="btn btn-xs btn-danger" data-toggle="modal" data-target="#rejectApplicant"> cancel</button>
+   
+    </td>
+    
+      </tr>
+      <tr>
+        <td>Desbswana</td>
+        <td>08/09/21</td>
+        <td>approved</td>
+
+    </td>
+   
+      </tr>
+     
+    </tbody>
+  </table>
+  </p>
+</div>
+</div>
+  
 
 
-
-
-</div>
-<!--view slots-->
-
-</div>
-	
-</div>
 <div class="footer">
   <p>Footer</p>
 </div>

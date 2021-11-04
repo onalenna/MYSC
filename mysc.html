@@ -43,20 +43,106 @@
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <h3>Home</h3>
-	  
-	  <div class="col-sm-4" style="background-color:transparent">
-	  <div class="well"></div>
-	  </div>
-	  <div class="col-sm-4" style="background-color:transparent">
-	  <div class="well"></div>
-	  </div>
-	  <div class="col-sm-4" style="background-color:transparent">
-	  <div class="well"></div>
-	  </div>
+      <hr>
+            <form>
+  <div class="row" >
+    <div class="col" >
+      <input type="text" class="form-control" id="email" placeholder="filter" name="email" style="border-radius:5px">
+    <button class="btn btn-info"style="float:right; margin-top:1%" >go</button>
     </div>
+  <div style="margin-top: 1%">
+  <label class="checkbox-inline">
+      <input type="checkbox" value="">Region
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Level
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">education
+    </label>
+   </div>
+  </div>
+</form>
+      <hr>
+          <div class="col-sm-4" style="background-color:transparent">
+    <div class="well">
+     <h4>TOTAL  APPLICANTS: 800</h4> 
+    </div>
+    </div>
+    <div class="col-sm-4" style="background-color:transparent">
+    <div class="well">
+     <h4>PLACED : 450</h4>  
+    </div>
+    </div>
+    <div class="col-sm-4" style="background-color:transparent">
+    <div class="well">
+     <h4>REJECTED: 452 </h4>
+    </div>
+    </div>
+    <div class="col-sm-4" style="background-color:transparent">
+    <div class="well">
+     <h4>REQUESTS: 74 </h4>
+    </div>
+    </div>
+      <div class="col-sm-4" style="background-color:transparent">
+    <div class="well">
+     <h4>CURRENT OPENINGS: 74 </h4>
+    </div>
+    </div>
+
+    <div class="col-sm-12">
+      JOB OPENINGS
+      <hr>
+      <!--jobs-->
+      <div class="panel" style="background-color:transparent">
+     <a href="#demo" class="btn btn-link" data-toggle="collapse">Account Intern wanted at Malete landboard</a>
+    <div id="demo" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+    <br>
+    <a href="#demo1" class="btn btn-link" data-toggle="collapse">IT Intern wanted at Tlokweng landboard</a>
+    <div id="demo1" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+      <br>
+    <a href="#demo11" class="btn btn-link" data-toggle="collapse">IT Intern wanted at Malete landboard</a>
+    <div id="demo11" class="collapse">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
+</div>
+      <!--jobs-->
+    </div>
+	  
+</div>
     <div id="menu1" class="tab-pane fade">
       <h3>Applicants table</h3>
+
+      <form>
+  <div class="row" >
+    <div class="col" >
+      <input type="text" class="form-control" id="email" placeholder="filter" name="email" style="border-radius:5px">
+    <button class="btn btn-info"style="float:right; margin-top:1%" >go</button>
+    </div>
+  <div style="margin-top: 1%">
+  <label class="checkbox-inline">
+      <input type="checkbox" value="">Region
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">Level
+    </label>
+    <label class="checkbox-inline">
+      <input type="checkbox" value="">education
+    </label>
+   </div>
+  </div>
+</form>
+
 	   <table class="table table-striped">
     <thead>
       <tr>
@@ -118,19 +204,19 @@
         <td>Skidotools</td>
         <td>Tlokweng</td>
         <td>Information technology</td>
-		<td> <button class="btn btn-xs btn-info"> view</button></td>
+		<td> <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#myModal"> view</button></td>
       </tr>
       <tr>
         <td>ProPiQ</td>
         <td>Phase 2</td>
         <td>Logistics</td>
-		<td> <button class="btn btn-xs btn-info"> view</button></td>
+		<td> <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#myModal">  view</button></td>
       </tr>
       <tr>
         <td>July</td>
         <td>Dooley</td>
         <td>july@example.com</td>
-		<td> <button class="btn btn-xs btn-info"> view</button></td>
+		<td> <button class="btn btn-xs btn-info" data-toggle="modal" data-target="#myModal"> view</button></td>
       </tr>
     </tbody>
   </table>
@@ -182,7 +268,27 @@
 </div>
 
 <!--modals-->
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
 
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--modal-->
 
 <div class="footer">
   <p>Footer</p>
